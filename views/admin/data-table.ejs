@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive DataTable</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="/admin/dataTableStyle.css">
+</head>
+<body>
+
+        
+
+
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Faeture Image </th>
+            <th> Date</th>
+            <th> Edit </th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+            <% posts.forEach(function(post){%>
+        <tr>
+            <td > <a href="/post/<%=post._id%>"><%= post.title %></a> </td>
+            <td>##</td>
+            <td><img src="/uploads/<%= post.image %>" alt="image thumbnail" width="70px" height="70px"></td>
+            <td><%= post.date %></td>
+            <td><a href="/admin/post/edit/<%=post._id%>"> Edit </a></td>  
+            <td><a href="/admin/post/delete/<%=post._id%>" onclick="return confirm('Are you sure to delete this record ?');"> Delete </a></td>
+        </tr>
+        <%})%>
+        
+        </tbody>
+    </table>
+</div>
+
+<center>
+    <p>
+        <pre> <a href="/admin">Dashboard ||</a> <a href="/blog/new">New Post ||</a> <a href="/">Home </a> </pre>
+    </p>
+</center>
+</body>
+</html>

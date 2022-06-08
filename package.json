@@ -1,0 +1,26 @@
+{
+  "name": "dev-motivation",
+  "version": "1.0.0",
+  "description": "A platform for software developers to gain inspiration and motivation from others or each other through success stories around them",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server",
+    "start": "nodemon server.js"
+  },
+  "author": "Godwill Tetah",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "mongoose": "^6.2.10",
+    "multer": "^1.4.4",
+    "nodemon": "^2.0.15",
+    "passport": "^0.5.2",
+    "passport-local": "^1.0.0",
+    "serve-favicon": "^2.5.0"
+  }
+}
